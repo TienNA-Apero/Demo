@@ -16,6 +16,7 @@ import com.example.democonductor.domain.model.ThemeMode
 enum class AppTheme {
     LIGHT,
     DARK,
+    OCEAN_BLUE,
     SUNSET_ORANGE
 }
 
@@ -23,20 +24,40 @@ fun ThemeMode.toAppTheme(): AppTheme {
     return when (this) {
         ThemeMode.LIGHT -> AppTheme.LIGHT
         ThemeMode.DARK -> AppTheme.DARK
+        ThemeMode.OCEAN_BLUE -> AppTheme.OCEAN_BLUE
         ThemeMode.SUNSET_ORANGE -> AppTheme.SUNSET_ORANGE
     }
 }
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Color(0xFFD0BCFF),
-    secondary = Color(0xFFCCC2DC),
-    tertiary = Color(0xFFEFB8C8)
+    primary = Purple80,
+    secondary = PurpleGrey80,
+    tertiary = Pink80
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Color(0xFF6650a4),
-    secondary = Color(0xFF625b71),
-    tertiary = Color(0xFF7D5260)
+    primary = Purple40,
+    secondary = PurpleGrey40,
+    tertiary = Pink40
+)
+
+private val OceanBlueColorScheme = lightColorScheme(
+    primary = OceanBlue,
+    secondary = SeaBlue,
+    tertiary = Aqua,
+    background = LightFoam,
+    surface = LightFoam,
+    onPrimary = Color.White,
+    onSecondary = Color.White,
+    onTertiary = Color.White,
+    onBackground = OceanBlueDark,
+    onSurface = OceanBlueDark,
+    error = Coral,
+    onError = Color.White,
+    primaryContainer = SeaBlue,
+    onPrimaryContainer = Color.White,
+    secondaryContainer = Aqua,
+    onSecondaryContainer = Color.White
 )
 
 private val SunsetOrangeColorScheme = lightColorScheme(
@@ -58,6 +79,7 @@ fun DemoConductorTheme(
     val colorScheme = when (theme) {
         AppTheme.LIGHT -> LightColorScheme
         AppTheme.DARK -> DarkColorScheme
+        AppTheme.OCEAN_BLUE -> OceanBlueColorScheme
         AppTheme.SUNSET_ORANGE -> SunsetOrangeColorScheme
     }
 
