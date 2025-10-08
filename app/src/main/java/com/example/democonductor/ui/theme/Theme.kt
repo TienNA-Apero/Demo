@@ -13,6 +13,22 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import com.example.democonductor.domain.model.ThemeMode
 
+enum class AppTheme {
+    LIGHT,
+    DARK,
+    OCEAN_BLUE,
+    SUNSET_ORANGE
+}
+
+fun ThemeMode.toAppTheme(): AppTheme {
+    return when (this) {
+        ThemeMode.LIGHT -> AppTheme.LIGHT
+        ThemeMode.DARK -> AppTheme.DARK
+        ThemeMode.OCEAN_BLUE -> AppTheme.OCEAN_BLUE
+        ThemeMode.SUNSET_ORANGE -> AppTheme.SUNSET_ORANGE
+    }
+}
+
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     secondary = PurpleGrey80,
@@ -44,18 +60,27 @@ private val OceanBlueColorScheme = lightColorScheme(
     onSecondaryContainer = Color.White
 )
 
+private val SunsetOrangeColorScheme = lightColorScheme(
+    primary = SunsetOrange,
+    secondary = CoralPink,
+    tertiary = AmberGlow,
+    background = SunsetCream,
+    surface = SunsetCream,
+    onPrimary = Color.White,
+    onSecondary = Color.White,
+    onTertiary = Color.White
+)
+
 @Composable
 fun DemoConductorTheme(
-    themeMode: ThemeMode = ThemeMode.LIGHT,
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = false,
+    theme: AppTheme = AppTheme.LIGHT,
     content: @Composable () -> Unit
 ) {
-    val colorScheme = when (themeMode) {
-        ThemeMode.OCEAN_BLUE -> OceanBlueColorScheme
-        ThemeMode.DARK -> DarkColorScheme
-        ThemeMode.LIGHT -> LightColorScheme
+    val colorScheme = when (theme) {
+        AppTheme.LIGHT -> LightColorScheme
+        AppTheme.DARK -> DarkColorScheme
+        AppTheme.OCEAN_BLUE -> OceanBlueColorScheme
+        AppTheme.SUNSET_ORANGE -> SunsetOrangeColorScheme
     }
 
     MaterialTheme(
