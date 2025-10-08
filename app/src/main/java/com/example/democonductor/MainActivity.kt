@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
             val state by homeViewModel.state.collectAsStateWithLifecycle()
 
             DemoConductorTheme(
-                darkTheme = state.currentTheme == ThemeMode.DARK,
+                themeMode = state.currentTheme,
                 dynamicColor = false
             ) {
                 HomeScreen()
