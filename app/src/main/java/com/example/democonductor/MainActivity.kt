@@ -11,6 +11,7 @@ import com.example.democonductor.domain.model.ThemeMode
 import com.example.democonductor.presentation.home.HomeScreen
 import com.example.democonductor.presentation.home.HomeViewModel
 import com.example.democonductor.ui.theme.DemoConductorTheme
+import com.example.democonductor.ui.theme.toAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -25,8 +26,7 @@ class MainActivity : ComponentActivity() {
             val state by homeViewModel.state.collectAsStateWithLifecycle()
 
             DemoConductorTheme(
-                darkTheme = state.currentTheme == ThemeMode.DARK,
-                dynamicColor = false
+                theme = state.currentTheme.toAppTheme()
             ) {
                 HomeScreen()
             }
