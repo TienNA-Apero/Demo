@@ -17,7 +17,8 @@ enum class AppTheme {
     LIGHT,
     DARK,
     OCEAN_BLUE,
-    SUNSET_ORANGE
+    SUNSET_ORANGE,
+    GOLDEN_LUXURY
 }
 
 fun ThemeMode.toAppTheme(): AppTheme {
@@ -26,6 +27,7 @@ fun ThemeMode.toAppTheme(): AppTheme {
         ThemeMode.DARK -> AppTheme.DARK
         ThemeMode.OCEAN_BLUE -> AppTheme.OCEAN_BLUE
         ThemeMode.SUNSET_ORANGE -> AppTheme.SUNSET_ORANGE
+        ThemeMode.GOLDEN_LUXURY -> AppTheme.GOLDEN_LUXURY
     }
 }
 
@@ -71,6 +73,23 @@ private val SunsetOrangeColorScheme = lightColorScheme(
     onTertiary = Color.White
 )
 
+private val GoldenLuxuryColorScheme = lightColorScheme(
+    primary = LuxuryGold,
+    secondary = RichGold,
+    tertiary = BronzeAccent,
+    background = IvoryWhite,
+    surface = ChampagneGold,
+    onPrimary = DeepBlack,
+    onSecondary = DeepBlack,
+    onTertiary = Color.White,
+    onBackground = DeepBlack,
+    onSurface = DeepBlack,
+    primaryContainer = GoldShimmer,
+    onPrimaryContainer = DeepBlack,
+    secondaryContainer = ChampagneGold,
+    onSecondaryContainer = DeepBlack
+)
+
 @Composable
 fun DemoConductorTheme(
     theme: AppTheme = AppTheme.LIGHT,
@@ -81,6 +100,7 @@ fun DemoConductorTheme(
         AppTheme.DARK -> DarkColorScheme
         AppTheme.OCEAN_BLUE -> OceanBlueColorScheme
         AppTheme.SUNSET_ORANGE -> SunsetOrangeColorScheme
+        AppTheme.GOLDEN_LUXURY -> GoldenLuxuryColorScheme
     }
 
     MaterialTheme(
