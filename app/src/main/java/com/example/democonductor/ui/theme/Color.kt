@@ -35,3 +35,12 @@ val GoldenAmber = Color(0xFFFFD4A3)         // Tertiary - Golden amber
 val SunsetCream = Color(0xFFFFF8F0)         // Light background
 val DuskPurple = Color(0xFF2D1B2E)          // Dark background
 val TwilightGray = Color(0xFF3A2C3B)        // Dark surface
+
+// Forest Green Theme Colors
+val ForestGreen = Color(0xFF2D5016)          // Primary - Deep forest green
+val MossGreen = Color(0xFF3A6B35)            // Secondary - Moss green
+val SageGreen = Color(0xFF6B8F71)            // Tertiary - Soft sage
+val PineGreen = Color(0xFF1B3F0D)            // Dark pine green
+val MintCream = Color(0xFFF0F8F0)            // Light background
+val FernGreen = Color(0xFF4A7C59)            // Accent fern
+val OliveGreen = Color(0xFF556B2F)           // Olive accent

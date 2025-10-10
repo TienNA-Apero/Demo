@@ -17,7 +17,8 @@ enum class AppTheme {
     LIGHT,
     DARK,
     OCEAN_BLUE,
-    SUNSET_ORANGE
+    SUNSET_ORANGE,
+    FOREST_GREEN
 }
 
 fun ThemeMode.toAppTheme(): AppTheme {
@@ -26,6 +27,7 @@ fun ThemeMode.toAppTheme(): AppTheme {
         ThemeMode.DARK -> AppTheme.DARK
         ThemeMode.OCEAN_BLUE -> AppTheme.OCEAN_BLUE
         ThemeMode.SUNSET_ORANGE -> AppTheme.SUNSET_ORANGE
+        ThemeMode.FOREST_GREEN -> AppTheme.FOREST_GREEN
     }
 }
 
@@ -71,6 +73,25 @@ private val SunsetOrangeColorScheme = lightColorScheme(
     onTertiary = Color.White
 )
 
+private val ForestGreenColorScheme = lightColorScheme(
+    primary = ForestGreen,
+    secondary = MossGreen,
+    tertiary = SageGreen,
+    background = MintCream,
+    surface = MintCream,
+    onPrimary = Color.White,
+    onSecondary = Color.White,
+    onTertiary = Color.White,
+    onBackground = PineGreen,
+    onSurface = PineGreen,
+    error = Coral,
+    onError = Color.White,
+    primaryContainer = FernGreen,
+    onPrimaryContainer = Color.White,
+    secondaryContainer = OliveGreen,
+    onSecondaryContainer = Color.White
+)
+
 @Composable
 fun DemoConductorTheme(
     theme: AppTheme = AppTheme.LIGHT,
@@ -81,6 +102,7 @@ fun DemoConductorTheme(
         AppTheme.DARK -> DarkColorScheme
         AppTheme.OCEAN_BLUE -> OceanBlueColorScheme
         AppTheme.SUNSET_ORANGE -> SunsetOrangeColorScheme
+        AppTheme.FOREST_GREEN -> ForestGreenColorScheme
     }
 
     MaterialTheme(
