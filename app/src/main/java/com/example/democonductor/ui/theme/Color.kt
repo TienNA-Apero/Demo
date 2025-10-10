@@ -35,3 +35,12 @@ val GoldenAmber = Color(0xFFFFD4A3)         // Tertiary - Golden amber
 val SunsetCream = Color(0xFFFFF8F0)         // Light background
 val DuskPurple = Color(0xFF2D1B2E)          // Dark background
 val TwilightGray = Color(0xFF3A2C3B)        // Dark surface
+
+// Golden Luxury Theme Colors
+val RichGold = Color(0xFFD4AF37)             // Primary - Rich gold
+val DeepGold = Color(0xFFB8860B)             // Dark gold
+val ChampagneGold = Color(0xFFF7E7CE)        // Light champagne
+val BrightGold = Color(0xFFFFD700)           // Bright gold accent
+val LuxuryBlack = Color(0xFF1A1A1A)          // Luxury black
+val CreamWhite = Color(0xFFFFFDF5)           // Cream white background
+val DarkChocolate = Color(0xFF3E2723)        // Dark chocolate brown
