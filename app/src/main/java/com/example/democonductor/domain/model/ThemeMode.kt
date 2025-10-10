@@ -4,5 +4,6 @@ enum class ThemeMode(val displayName: String) {
     LIGHT("Light Theme"),
     DARK("Dark Theme"),
     OCEAN_BLUE("Ocean Blue Theme"),
-    SUNSET_ORANGE("Sunset Orange")
+    SUNSET_ORANGE("Sunset Orange"),
+    GOLDEN_LUXURY("Golden Luxury")
 }
